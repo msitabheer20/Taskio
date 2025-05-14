@@ -124,3 +124,7 @@ html, body, :root {
     @apply bg-background text-foreground;
   }
 }
+
+.cl-internal-1dauvpw {
+  display: "none"
+}

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react"
 import Reveal from "@/utils/Reveal";
+import { Input } from "@/components/ui/input";
 
 const headingFont = localFont({ src: '../../public/fonts/font.woff2' })
 
@@ -27,7 +28,7 @@ const textFont = Poppins({
 
 const MarketingPage = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 px-4 md:px-12">
+    <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 px-4 md:px-12 py-12">
       {/* Left: Content */}
       <div className="flex-1 flex flex-col items-center md:items-start lg:items-center justify-center">
         <div className={cn(
@@ -61,11 +62,14 @@ const MarketingPage = () => {
           </div>
         </Reveal>
         <Reveal axis="x" axisValue={100} duration={0.4} delay={1.8}>
-          <Button className="mt-6 self-center md:self-start lg:self-center" size="lg" asChild>
-            <Link href="/sign-up">
-              Get Kanban for free
-            </Link>
-          </Button>
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center w-full gap-4">
+            <Input type="email" placeholder="Email" className="w-full md:w-auto" />
+            <Button className="self-center md:self-start lg:self-center" size="lg" asChild>
+              <Link href="/sign-up">
+              Sign up
+              </Link>
+            </Button>
+          </div>
         </Reveal>
       </div>
 
